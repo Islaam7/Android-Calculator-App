@@ -1,6 +1,6 @@
 # Android-Calculator-App
 This repository contains the source code for a simple Android calculator app. Designed to offer a clean and user-friendly interface, this app provides basic arithmetic operations and supports both light and dark mode.
-# Screenshots
+# Image
 ![Promo](https://github.com/user-attachments/assets/c8c04c95-f5bd-4a7f-a39e-620025f109fe)
 # Features
 Basic arithmetic functions
