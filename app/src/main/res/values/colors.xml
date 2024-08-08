@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#252A34</color>
+    <color name="black2">#222730</color>
+    <color name="white">#f7f8fa</color>
+    <color name="white2">#EAEAEA</color>
+    <color name="cyan">#08D9D6</color>
+    <color name="cyan2">#86dec6</color>
+    <color name="light_red">#FF2E63</color>
+    <color name="light_black">#252A34</color>
+    <color name="dark_black">#201E43</color>
+    <color name="creme_white">#F7F7F8</color>
+    <color name="btn_white">#F7F7F8</color>
+    <color name="Grid_light_color">#F7F7F8</color>
+    <color name="division_text_color">#FF0000</color> <!-- Red color -->
+</resources>
