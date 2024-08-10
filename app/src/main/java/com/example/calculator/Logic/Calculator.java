@@ -55,11 +55,15 @@ public class Calculator<T extends Number>{
     public void printResult(){
         resultFlag = false;
         List<String> postfix = infixToPostfix(tokens);
-        double result = evaluatePostfix(postfix);
-        if (result % 1 == 0) {
-            tv_MainView.setText(String.valueOf((long) result));
-        } else {
-            tv_MainView.setText(String.valueOf(result));
+        try {
+            double result = evaluatePostfix(postfix);
+            if (result % 1 == 0) {
+                tv_MainView.setText(String.valueOf((long) result));
+            } else {
+                tv_MainView.setText(String.valueOf(result));
+            }
+        } catch (Exception e) {
+            tv_MainView.setText(tv_MainView.getText().toString());
         }
     }
 
@@ -104,9 +108,12 @@ public class Calculator<T extends Number>{
                         if (operand2 == 0) {
                             throw new ArithmeticException();
                         }
-                        stack.push(operand1 / operand2);
+                        stack.push(operand1 % operand2);
                         break;
                     case "÷":
+                        if (operand2 == 0) {
+                        throw new ArithmeticException();
+                        }
                         stack.push(operand1 / operand2);
                         break;
                 }

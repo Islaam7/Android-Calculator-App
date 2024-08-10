@@ -30,12 +30,13 @@ public class Intializations{
     public Button btn_Equal;
     private Button btn_Ac;
     private Button btn_C;
-    public static boolean greenFlag = false;
-    public static boolean operatorFlag = false;
-    public static boolean equalFlag = false;
-    public static boolean dotflag = false;
-    public static boolean divisionPressedFlag = false;
-    public static boolean zeroHandleFlag = false;
+    public static boolean greenFlag;
+    public static boolean operatorFlag ;
+    public static boolean equalFlag;
+    public static boolean dotflag;
+    public static boolean divisionPressedFlag;
+    public static boolean zeroHandleFlag;
+    public static boolean isDotPressed;
     private TextView tv_MainView;
 
     public Intializations(Activity activity) {
@@ -149,9 +150,11 @@ public class Intializations{
                 Button button = (Button) v;
                 divisionPressedFlag = true;
 
-                if(greenFlag & dotflag){
+                if(greenFlag & dotflag & !isDotPressed){
                     tv_MainView.append(button.getText());
                     dotflag = false;
+                    isDotPressed = true;
+                    Calculator.resultFlag = true;
                 }else {
                     tv_MainView.setText(tv_MainView.getText().toString());
                 }
